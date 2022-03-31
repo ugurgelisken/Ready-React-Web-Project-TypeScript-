@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export {
   getUser,
@@ -13,8 +13,8 @@ export {
 
 // AXIOS CONFIG
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 
 axios.interceptors.response.use(
   (response) => {
@@ -28,7 +28,7 @@ axios.interceptors.response.use(
 // GET ADMIN
 const getUser = async (jwt: string, id: string) => {
   return axios
-    .get('admin/' + id, {
+    .get("admin/" + id, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
@@ -50,8 +50,8 @@ interface ILoginProps {
 
 const login = async (params: ILoginProps) => {
   return axios({
-    method: 'post',
-    url: 'admin/login',
+    method: "post",
+    url: "admin/login",
     data: params,
   })
     .then((data) => {
@@ -75,7 +75,7 @@ interface IRegister {
 
 const register = async (params: IRegister) => {
   try {
-    const data = await axios.post('admin/register', params, {
+    const data = await axios.post("admin/register", params, {
       headers: {
         Authorization: `Bearer `,
       },
@@ -90,7 +90,7 @@ const register = async (params: IRegister) => {
 const jwtValidate = (jwt: string) => {
   return axios
     .post(
-      'session',
+      "session",
       {},
       {
         headers: {
@@ -99,8 +99,8 @@ const jwtValidate = (jwt: string) => {
       }
     )
     .then((data) => {
-      if (window.location.pathname === '/no-service') {
-        window.location.href = '/';
+      if (window.location.pathname === "/no-service") {
+        window.location.href = "/";
       }
       return data;
     })
@@ -109,7 +109,7 @@ const jwtValidate = (jwt: string) => {
         return error.response;
       } else {
         setTimeout(() => {
-          window.location.href = '/no-service';
+          window.location.href = "/no-service";
         }, 10 * 1000);
         return null;
       }
@@ -120,7 +120,7 @@ const jwtValidate = (jwt: string) => {
 const forgotPassword = (jwt: string, email: string) => {
   return axios
     .post(
-      'admin/password-reset',
+      "admin/password-reset",
       { email },
       {
         headers: {
@@ -146,7 +146,7 @@ interface IPasswordRecovery {
 
 const passwordRecovery = async (params: IPasswordRecovery) => {
   return axios
-    .post('admin/password-recovery', params, {
+    .post("admin/password-recovery", params, {
       headers: {
         Authorization: `Bearer `,
       },
@@ -173,7 +173,7 @@ const passwordChange = async (
   params: IPasswordChange
 ) => {
   return axios
-    .put('admin/password-change/' + id, params, {
+    .put("admin/password-change/" + id, params, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
@@ -196,7 +196,7 @@ interface IUserData {
 
 const updateUserData = async (jwt: string, id: string, params: IUserData) => {
   return axios
-    .put('admin/' + id, params, {
+    .put("admin/" + id, params, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },

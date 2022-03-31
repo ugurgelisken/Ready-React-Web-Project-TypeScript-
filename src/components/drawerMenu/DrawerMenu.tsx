@@ -1,16 +1,16 @@
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
-import Divider from '@material-ui/core/Divider';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import { useTranslation } from 'react-i18next';
+import Divider from "@material-ui/core/Divider";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import { useTranslation } from "react-i18next";
 
-import './../../i18n';
+import "./../../i18n";
 
-import './DrawerMenu.scss';
+import "./DrawerMenu.scss";
 
 const DrawerMenu = () => {
   const { t } = useTranslation();
@@ -21,30 +21,30 @@ const DrawerMenu = () => {
   );
 
   return (
-    <div className={`Menu ${isMenuOpen ? 'open' : 'close'}`}>
-      <List component='nav'>
+    <div className={`Menu ${isMenuOpen ? "open" : "close"}`}>
+      <List component="nav">
         <ListItem
           button
-          selected={activePage === 'dashboard'}
+          selected={activePage === "dashboard"}
           onClick={() => {
-            history.push('/');
+            history.push("/");
           }}
         >
           <ListItemIcon>
             <img
-              className='icon'
-              src='../icons/dashboard.svg'
-              alt={t('btn.dashboard')}
+              className="icon"
+              src="../icons/dashboard.svg"
+              alt={t("btn.dashboard")}
             />
           </ListItemIcon>
-          <ListItemText primary={t('btn.dashboard')} />
+          <ListItemText primary={t("btn.dashboard")} />
         </ListItem>
         <Divider />
       </List>
       <div
-        className='version'
+        className="version"
         onClick={() => {
-          history.push('/about');
+          history.push("/about");
         }}
       >
         v {process.env.REACT_APP_VERSION}

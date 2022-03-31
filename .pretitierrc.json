@@ -1,6 +1,13 @@
 {
-  "trailingComma": "es5",
+  "trailingComma": "none",
   "tabWidth": 4,
   "semi": false,
-  "singleQuote": true
+  "useEditorConfig": false,
+  "arrowParens": "avoid",
+  "useTabs": false,
+  "printWidth": 80,
+  "singleQuote": true,
+  "jsxBracketSameLine": false,
+  "parser": "typescript",
+  "allowTemplateLiterals": true
 }

@@ -16,7 +16,6 @@ const _404 = () => {
   return (
     <div className="_404">
       <img src="./icons/404.svg" alt="404" />
-      <p>Sayfa bulunamadı, ana sayfaya yönlendiriliyorsunuz...</p>
     </div>
   );
 };

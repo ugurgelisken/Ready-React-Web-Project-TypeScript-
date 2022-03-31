@@ -1,13 +1,13 @@
-import { combineReducers } from 'redux';
-import { configureStore } from '@reduxjs/toolkit';
-import { persistReducer } from 'redux-persist';
-import logger from 'redux-logger';
-import thunk from 'redux-thunk';
+import { combineReducers } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import { persistReducer } from "redux-persist";
+import logger from "redux-logger";
+import thunk from "redux-thunk";
 
-import storage from 'redux-persist/lib/storage';
+import storage from "redux-persist/lib/storage";
 
-import application from './application.store';
-import pagination from './pagination.store';
+import application from "./application.store";
+import pagination from "./pagination.store";
 
 const reducers = combineReducers({
   application,
@@ -15,9 +15,9 @@ const reducers = combineReducers({
 });
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
-  whitelist: ['application', 'pagination'],
+  whitelist: ["application", "pagination"],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
