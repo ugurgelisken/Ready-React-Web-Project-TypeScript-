@@ -1,0 +1,30 @@
+@import './../../variables.scss';
+
+.Header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+  .Appbar {
+    opacity: 1;
+  }
+}
+
+h6 {
+  margin-top: 8px !important;
+}
+
+.MuiIconButton-label {
+  color: white !important;
+}
+
+.MuiToolbar-gutters {
+  padding-left: 16px !important;
+  padding-right: 10px !important;
+}
+
+.MuiTypography-root {
+  margin-left: 4px !important;
+}

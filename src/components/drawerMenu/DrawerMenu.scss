@@ -1,0 +1,68 @@
+@import './../../variables.scss';
+
+.Menu {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.2s;
+  background-color: white;
+  box-shadow: #{$box-shadow};
+
+  /* .logo {
+    display: block;
+    margin: auto auto;
+    width: 60px;
+    height: 70px;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin: auto auto;
+    }
+
+    button {
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+    }
+  }*/
+
+  .icon {
+    width: 24px;
+    opacity: 0.5;
+  }
+
+  .version {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+    background-color: white;
+    &:hover {
+      cursor: pointer;
+      color: black;
+    }
+  }
+}
+
+.close {
+  width: 56px;
+}
+
+.open {
+  width: 200px;
+}
+
+.MuiListItemIcon-root {
+  min-width: 40px !important;
+}
+
+.MuiListItemText-primary {
+  white-space: nowrap;
+}

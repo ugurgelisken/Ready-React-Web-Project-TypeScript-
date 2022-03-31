@@ -1,0 +1,21 @@
+@import './../../variables.scss';
+
+.user-container {
+  padding: 10px;
+
+  .User {
+    display: grid;
+
+    .input {
+      background-color: white;
+      width: 240px;
+      max-width: 100vh;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.Tab {
+  border-bottom: 1px solid silver;
+  background-color: white;
+}

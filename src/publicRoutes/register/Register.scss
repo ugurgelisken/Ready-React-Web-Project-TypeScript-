@@ -1,0 +1,36 @@
+.Register {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 720px;
+
+  .Card {
+    margin: 0 auto;
+    padding: 16px;
+    width: 280px;
+    border-radius: 16px;
+
+    img {
+      height: 60px;
+      width: auto;
+      display: flex;
+      margin: 0 auto 10px;
+    }
+
+    button {
+      margin-top: 16px;
+      margin-left: 8px;
+      float: right;
+    }
+  }
+}
+
+.SuccessMessageBox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
